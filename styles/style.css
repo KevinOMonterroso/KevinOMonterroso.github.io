@@ -1,19 +1,26 @@
-/* tablet */
+/* mobile */
 @media (min-width: 768px) {
   html {
     font-size: 1rem;
   }
 }
 
-/* escritorio */
+/* desktop */
 @media (min-width: 1200px) {
-  body {
+  html {
     font-size: 1.05rem;
+  }
+  p {
+    max-width: 65ch;
+  }
+  .projects {
+    padding: 0 2rem;
   }
 }
 
 @media (hover: hover) {
   .post:hover {
+    cursor: pointer;
     box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
     transform: translateY(-6px);
   }
@@ -35,7 +42,6 @@
 
 html {
   font-size: 0.95rem;
-  line-height: 1.6;
 }
 
 body {
@@ -55,7 +61,6 @@ h3 {
 
 p {
   font-size: 1rem;
-  max-width: 65ch;
 }
 
 header {
@@ -78,32 +83,30 @@ header {
 main section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem 0;
 }
 
-#main-projects {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+.projects {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  padding: 0 2rem;
+  grid-auto-rows: auto;
+  justify-items: center;
   gap: 1.5rem;
+  padding: 0 1rem;
 }
 
 .post {
-  width: 300px;
+  width: 100%;
+  max-width: 320px;
   background-color: #fff;
   border-radius: 0.5rem;
   padding: 0.25rem 0;
   text-align: center;
-  cursor: pointer;
-
   transition: transform 0.3s ease, box-shadow 0.5s ease;
 }
 
 .post img {
   width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
 }
@@ -124,7 +127,13 @@ footer p {
 }
 
 footer a {
+  min-height: 44px;
   transition: 0.3s;
   text-decoration: none;
   color: #fff;
+}
+
+footer a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
 }
