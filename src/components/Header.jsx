@@ -3,20 +3,18 @@ import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="bg-transparent text-zinc-100 dark:text-white p-4">
-      <div className="flex items-center justify-between max-w-7xl mx-auto">
+    <header className="bg-transparent p-10 text-zinc-100 dark:text-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between">
         <section className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">KM</span>
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400">
+            <span className="text-lg font-bold text-white">KM</span>
           </div>
-          <p className="text-zinc-900 dark:text-white hover:text-orange-400 dark:hover:text-orange-500 transition-colors duration-200 font-medium">
+          <p className="font-medium text-zinc-900 transition-colors duration-200 hover:text-orange-400 dark:text-white dark:hover:text-orange-500">
             Kevin Monterroso
           </p>
         </section>
-
         <nav className="flex items-center gap-6">
-          <div className="hidden md:flex items-center gap-6">
-            <Hyperlink text="About" href="#about" />
+          <div className="hidden items-center gap-6 md:flex">
             <Hyperlink text="Skills" href="#skills" />
             <Hyperlink text="Projects" href="#projects" />
           </div>

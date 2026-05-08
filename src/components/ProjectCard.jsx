@@ -4,11 +4,11 @@ const ProjectCard = ({ title, description, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="block bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+      className="block rounded-xl bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl dark:bg-zinc-800"
     >
-      <h3 className="text-xl font-bold text-lime-400 mb-3">{title}</h3>
-      <p className="text-zinc-600 dark:text-zinc-400 mb-4">{description}</p>
-      <span className="inline-flex items-center text-orange-400 hover:text-orange-500 font-medium">
+      <h3 className="mb-3 text-xl font-bold text-lime-400">{title}</h3>
+      <p className="mb-4 text-zinc-600 dark:text-zinc-400">{description}</p>
+      <span className="inline-flex items-center font-medium text-orange-400 hover:text-orange-500">
         View Project
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, link }) => {
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
-          className="w-4 h-4 ml-1"
+          className="ml-1 h-4 w-4"
         >
           <path
             strokeLinecap="round"

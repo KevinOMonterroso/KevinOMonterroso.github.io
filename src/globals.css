@@ -25,4 +25,7 @@
   ::file-selector-button {
     border-color: var(--color-gray-100, currentcolor);
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }

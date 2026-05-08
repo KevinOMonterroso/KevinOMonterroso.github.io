@@ -5,7 +5,7 @@ const SocialButton = ({ icon, label, href }) => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="w-12 h-12 rounded-full hover:bg-orange-400 hover:dark:bg-orange-500 flex items-center justify-center transition-colors duration-200"
+      className="flex h-12 w-12 items-center justify-center rounded-full transition-colors duration-200 hover:bg-orange-400 hover:dark:bg-orange-500"
     >
       {icon}
     </a>
