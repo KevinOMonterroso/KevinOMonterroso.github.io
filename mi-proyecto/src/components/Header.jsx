@@ -3,13 +3,13 @@ import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="bg-lime-400 dark:bg-lime-300 text-white dark:text-zinc-900 p-4">
+    <header className="bg-transparent text-zinc-100 dark:text-white p-4">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <section className="flex items-center gap-2">
           <div className="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-lg">KM</span>
           </div>
-          <p className="text-white dark:text-zinc-900 hover:text-orange-400 dark:hover:text-orange-500 transition-colors duration-200 font-medium">
+          <p className="text-zinc-900 dark:text-white hover:text-orange-400 dark:hover:text-orange-500 transition-colors duration-200 font-medium">
             Kevin Monterroso
           </p>
         </section>

@@ -46,7 +46,7 @@ const Footer = () => {
     },
     {
       label: "Email",
-      href: "mailto:your.email@example.com",
+      href: "mailto:kevinobedmm@gmail.com",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-lime-400 dark:bg-lime-300 text-white dark:text-zinc-900 p-8">
+    <footer className="bg-lime-400  text-white dark:text-zinc-900 p-8">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-6">
         <div className="flex gap-4">
           {socialLinks.map((social, index) => (
