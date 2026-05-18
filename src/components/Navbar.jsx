@@ -1,7 +1,8 @@
-import Hyperlink from "./Hyperlink";
+// import React from "react";
+import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
-const Header = () => {
+const Navbar = () => {
   return (
     <header className="bg-transparent p-10 text-zinc-100 dark:text-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -14,10 +15,19 @@ const Header = () => {
           </p>
         </section>
         <nav className="flex items-center gap-6">
-          <div className="hidden items-center gap-6 md:flex">
-            <Hyperlink text="Skills" href="#skills" />
-            <Hyperlink text="Projects" href="#projects" />
-          </div>
+          <div className="hidden items-center gap-6 md:flex"></div>
+          <Link
+            to="/"
+            className="scroll-smooth font-medium text-zinc-900 transition-colors duration-200 hover:text-orange-400 dark:text-white dark:hover:text-orange-500"
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="scroll-smooth font-medium text-zinc-900 transition-colors duration-200 hover:text-orange-400 dark:text-white dark:hover:text-orange-500"
+          >
+            About
+          </Link>
           <ThemeToggle />
         </nav>
       </div>
@@ -25,4 +35,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

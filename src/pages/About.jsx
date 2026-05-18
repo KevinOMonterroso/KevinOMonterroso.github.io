@@ -1,6 +1,6 @@
-const About = () => {
+function About() {
   return (
-    <section id="about" className="bg-zinc-100 px-4 py-20 dark:bg-zinc-900">
+    <section id="about" className="px-4 py-20">
       <div className="mx-auto max-w-4xl">
         <h2 className="mb-8 text-center text-4xl font-bold text-lime-400">
           About Me
@@ -17,6 +17,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+}
 
 export default About;
