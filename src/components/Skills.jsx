@@ -84,8 +84,8 @@ const Skills = () => {
   return (
     <section id="skills" className="px-4 py-20">
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-8 text-center text-4xl font-bold text-lime-400">
-          Skills
+        <h2 className="mb-8 text-center font-jetbrains-mono text-4xl font-bold text-emerald-500">
+          Tecnologías
         </h2>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
           {skills.map((skill, index) => (

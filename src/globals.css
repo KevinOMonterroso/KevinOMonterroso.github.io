@@ -3,18 +3,22 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-  font-family: DotGothic16;
-  src: url(./assets/fonts/DotGothic16-Regular.woff2);
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_opsz,wght.woff2) format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: Doto;
-  src: url(./assets/fonts/Doto-Regular.woff2);
+  font-family: "JetBrains Mono";
+  src: url(./assets/fonts/JetBrainsMono-VariableFont_wght.woff2) format("woff2");
+  font-weight: 100 800;
+  font-display: swap;
 }
 
 @theme {
-  --font-doto: Doto, "sans-serif";
-  --font-DotGothic16: DotGothic16, "sans-serif";
+  --font-inter: Inter, "sans-serif";
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
 }
 
 @layer base {
@@ -26,6 +30,28 @@
     border-color: var(--color-gray-100, currentcolor);
   }
   html {
+    font-family: Inter, sans-serif;
     scroll-behavior: smooth;
+    height: 100%;
+    position: relative;
+    background-color: var(--color-neutral-50);
   }
+  html.dark {
+  background-color: var(--color-neutral-900);
+  }
+}
+
+#typewriter::after {
+  content: "_";
+  animation: blink 0.7s step-end infinite;
+  margin-left: 2px;
+  color: var(--color-neutral-900);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.dark #typewriter::after {
+  color: var(--color-neutral-50);
 }

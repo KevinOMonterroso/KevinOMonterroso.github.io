@@ -4,12 +4,12 @@ const ProjectCard = ({ title, description, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="block rounded-xl bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl dark:bg-zinc-800"
+      className="block rounded-xl bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl dark:bg-neutral-800"
     >
-      <h3 className="mb-3 text-xl font-bold text-lime-400">{title}</h3>
-      <p className="mb-4 text-zinc-600 dark:text-zinc-400">{description}</p>
-      <span className="inline-flex items-center font-medium text-orange-400 hover:text-orange-500">
-        View Project
+      <h3 className="mb-3 font-jetbrains-mono text-xl font-bold text-emerald-500">{title}</h3>
+      <p className="mb-4 text-neutral-600 dark:text-neutral-400">{description}</p>
+      <span className="inline-flex items-center font-medium text-emerald-600 hover:text-emerald-500">
+        Ver Proyecto
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
