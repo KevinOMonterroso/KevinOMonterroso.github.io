@@ -19,6 +19,39 @@
 @theme {
   --font-inter: Inter, "sans-serif";
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  @keyframes scrollFor {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -28.284px 0;
+    }
+  }
+
+  @keyframes scrollRev {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 28.284px 0;
+    }
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50% ;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
 
 @layer base {
@@ -39,17 +72,43 @@
   html.dark {
   background-color: var(--color-neutral-900);
   }
+  .stripes {
+    animation: scrollFor 1s linear infinite;
+    background: repeating-linear-gradient(
+      45deg,
+      #5ee9b5 0px,
+      #5ee9b5 10px,
+      #fafafa 10px,
+      #fafafa 20px
+    );
+    background-size: 28.284px 28.284px;
+  }
+  .dark .stripes{
+    animation: scrollRev 1s linear infinite;
+    background: repeating-linear-gradient(
+      45deg,
+      #d0fae5 0px,
+      #d0fae5 10px,
+      #171717 10px,
+      #171717 20px
+    );
+    background-size: 28.284px 28.284px;
+  }
+  .text-bg-animation {
+    display: inline-block;
+    background: linear-gradient(to right, #03d662 0%, #0a9add 50%, #10ecc4 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 1s ease infinite;
+  }
 }
 
 #typewriter::after {
   content: "_";
-  animation: blink 0.7s step-end infinite;
+  animation: blink 1s step-end infinite;
   margin-left: 2px;
   color: var(--color-neutral-900);
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
 }
 
 .dark #typewriter::after {

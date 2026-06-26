@@ -6,7 +6,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="rounded-full bg-emerald-600 p-2 transition-colors duration-200 hover:bg-emerald-500"
+      className="rounded-full bg-emerald-500 p-2 transition-colors duration-200 hover:bg-emerald-800 dark:hover:bg-emerald-200"
       aria-label="Toggle theme"
     >
       {isDarkMode ? (
@@ -16,7 +16,7 @@ const ThemeToggle = () => {
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
-          className="h-6 w-6 text-neutral-100"
+          className="h-6 w-6 text-neutral-50"
         >
           <path
             strokeLinecap="round"
@@ -31,7 +31,7 @@ const ThemeToggle = () => {
           viewBox="0 0 24 24"
           strokeWidth={2}
           stroke="currentColor"
-          className="h-6 w-6 text-neutral-100"
+          className="h-6 w-6 text-neutral-900"
         >
           <path
             strokeLinecap="round"

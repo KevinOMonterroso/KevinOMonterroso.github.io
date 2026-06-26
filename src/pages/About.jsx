@@ -2,21 +2,39 @@ function About() {
   return (
     <section id="about" className="px-4 py-20">
       <div className="mx-auto max-w-4xl">
-        <h2 className="mb-8 text-center font-jetbrains-mono text-4xl font-bold text-emerald-500">
-          Sobre Mí
-        </h2>
-        <div className="rounded-2xl bg-neutral-200 p-8 shadow-lg dark:bg-neutral-800">
+        <div className="p-8">
+          <b className="mb-1 underline decoration-wavy decoration-amber-300 italic text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+            Quien soy
+          </b>
           <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-            Soy Kevin Monterroso, un Desarrollador Web Junior apasionado por
-            crear aplicaciones web modernas y responsivas. Disfruto aprender
-            nuevas tecnologías y construir proyectos que resuelven problemas reales.
-            Cuando no estoy programando, me encuentras explorando nuevos frameworks
-            y mejorando mis habilidades.
+            Me llamo Kevin Monterroso, soy estudiante universitario de Ingeniería en Ciencias de la Computación 
+            en la Universidad UMG, originario de Guatemala.
           </p>
+          <br/>
+          <b className="mb-1 underline decoration-wavy decoration-amber-300 italic text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+            Mini blog
+          </b>
           <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-            No soy especialmente experto en ninguna tecnología por el momento, pero 
-            estoy siempre dispuesto seguir aprendiendo y mejorar para adaptarme a
-            cualquier entorno de trabajo que se me presente.
+            A pesar de no tener mucha experiencia en el desarrollo web, busco la manera de 
+            aprender algo nuevo cada día y mejorar para adaptarme a los tiempos modernos, donde la competencia 
+            en trabajos de desarrollo web para juniors ha elevado el estándar.
+          </p>
+          <br/>
+          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            Trabajar en este portafolio me ha ayudado mucho a entender cómo usar las diferentes tecnologías, 
+            pero no solo a saber usarlas, sino a entender que para aprender debo practicar y no solo sentarme a 
+            ver tutoriales y videos en YouTube (que por supuesto me han ayudado). Por eso mi perspectiva
+            sobre cómo trabajar en entornos reales ha cambiado: entiendo que no todo puede ser perfecto, pero aún 
+            así hay que intentarlo. Si aún me encontrara sentado viendo tutoriales para <b>"dominar"</b> cada tecnología,
+            probablemente no estaría aquí con este portafolio, pensando si debería empezar a trabajar en él o 
+            aprender un poco más.
+          </p>
+          <br/>
+          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+            Gran parte de mi trabajo al realizar este portafolio ha sido inspirado en otros en internet, y uno al 
+            que recurrí varias veces fue al portafolio de <a href="https://mxb.dev/" className="font-bold hover:underline decoration-wavy decoration-amber-300">Max Böck</a>. 
+            Aún me falta mucho recorrido para llegar a ser un desarrollador front-end como él, pero eso no me desanima; 
+            por el contrario, me llena de emoción llegar a poder realizar trabajos como los que él hace.
           </p>
         </div>
       </div>

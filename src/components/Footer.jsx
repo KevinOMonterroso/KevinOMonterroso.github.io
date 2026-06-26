@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 border-t-neutral-900 p-8 text-white dark:border-t-neutral-200 dark:text-neutral-900">
+    <footer className="p-8 text-white dark:border-t-neutral-200 dark:text-neutral-900">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6">
         <div className="flex gap-4">
           <a
@@ -36,7 +36,7 @@ const Footer = () => {
             <MdEmail className="h-7 w-7 text-neutral-900 dark:text-neutral-200" />
           </a>
         </div>
-        <p className="text-sm opacity-80 text-neutral-900 dark:text-neutral-200">
+        <p className="text-center text-sm opacity-80 text-neutral-900 dark:text-neutral-200">
           © {new Date().getFullYear()} Kevin Monterroso. Todos los derechos reservados.
         </p>
       </div>

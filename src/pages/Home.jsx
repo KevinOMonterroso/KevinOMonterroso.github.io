@@ -1,55 +1,39 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Projects from "../components/Projects.jsx"
 
 const Home = () => {
 
+  const [text, setText] = useState("");
+
   useEffect(() => {
-  const container = document.getElementById("typewriter");
-  if (!container) return;
-
-  const timeouts = [];
-  let cancelled = false;
-
-  function runAnimation(text, i = 0) {
-    if (cancelled) return;
-    if (i === 0) container.textContent = "";
-    container.textContent += text[i];
-    if (i === text.length - 1) return;
-    const id = setTimeout(() => runAnimation(text, i + 1), 100);
-    timeouts.push(id);
-  }
-
-  runAnimation("Hola, soy Kevin!");
-
-  return () => {
-    cancelled = true;
-    timeouts.forEach(clearTimeout);
-  };
-}, []);
+    const target = "Hola, soy Kevin!";
+    let i = 0;
+    const interval = setInterval(() => {
+      setText(target.slice(0, i + 1));
+      i++;
+      if (i === target.length) clearInterval(interval);
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div>
+    <>
       <section
         id="hero"
-        className="flex flex-row items-center justify-between m-8 text-center text-white md:m-18 lg:m-32 dark:text-neutral-900"
+        className="flex flex-row items-center justify-between m-10 text-center text-white md:m-16 lg:m-24 dark:text-neutral-900"
       >
-        <div className="text-left">
-            <h1 id="typewriter" className="mb-5 font-jetbrains-mono text-4xl font-bold text-neutral-900 md:text-5xl lg:text-7xl dark:text-white">
-              
+        <div className="text-left 2xl:text-center">
+            <h1 id="typewriter" className="mb-2  text-5xl font-bold text-neutral-900 md:text-6xl lg:text-7xl dark:text-white">
+              {text}
             </h1>
-          <h2 className="mb-5 font-jetbrains-mono text-2xl text-emerald-500 md:text-3xl lg:text-4xl">
-            Me gusta el desarrollo web
-          </h2>
-          <p className="text-lg leading-relaxed text-neutral-700 md:text-xl lg:text-2xl dark:text-neutral-300">
-            Desarrollador Web Junior apasionado por crear aplicaciones web modernas y
-            adaptativas. Disfruto aprender nuevas tecnologías y construir
-            proyectos que resuelven problemas reales. Cuando no estoy programando, me
-            encuentro explorando nuevos frameworks y mejorando mis habilidades.
+          <p className="max-w-4xl text-xl leading-relaxed text-neutral-700 md:text-2xl lg:text-3xl dark:text-neutral-300">
+            Me encanta crear websites modernas, adaptables, interactivas y <em id="fun-text" className="text-bg-animation font-bold" >divertidas</em>.
+            En mis tiempos libres me encuentras explorando y aprendiendo nuevas tecnologías.
           </p>
         </div>
       </section>
       <Projects/>
-    </div>
+    </>
   );
 };
 
