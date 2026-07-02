@@ -78,10 +78,25 @@
     height: 100%;
     position: relative;
     background-color: var(--color-neutral-50);
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(3, 214, 98, 0.4) 0%, transparent 50%),
+      radial-gradient(circle at 85% 20%, rgba(10, 154, 221, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(16, 236, 196, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 90% 70%, rgba(3, 214, 98, 0.2) 0%, transparent 50%);
+    background-attachment: fixed;
   }
   html.dark {
-  background-color: var(--color-neutral-900);
+    background-color: var(--color-neutral-900);
+    background-image:
+      radial-gradient(circle at 15% 10%, rgba(3, 214, 98, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 85% 20%, rgba(10, 154, 221, 0.18) 0%, transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(16, 236, 196, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 90% 70%, rgba(3, 214, 98, 0.12) 0%, transparent 50%);
+    background-attachment: fixed;
   }
+}
+
+@layer components {
   .stripes {
     animation: scrollFor 1s linear infinite;
     background: repeating-linear-gradient(
@@ -104,28 +119,6 @@
     );
     background-size: 28.284px 28.284px;
   }
-  .stripesB {
-    animation: scrollRev 1s linear infinite;
-    background: repeating-linear-gradient(
-      45deg,
-      #5ee9b5 0px,
-      #5ee9b5 10px,
-      #fafafa 10px,
-      #fafafa 20px
-    );
-    background-size: 28.284px 28.284px;
-  }
-  .dark .stripesB{
-    animation: scrollFor 1s linear infinite;
-    background: repeating-linear-gradient(
-      45deg,
-      #d0fae5 0px,
-      #d0fae5 10px,
-      #171717 10px,
-      #171717 20px
-    );
-    background-size: 28.284px 28.284px;
-  }
   .text-bg-animation {
     display: inline-block;
     background: linear-gradient(to right, #03d662 0%, #0a9add 50%, #10ecc4 100%);
@@ -134,32 +127,31 @@
     -webkit-text-fill-color: transparent;
     animation: gradient 1s ease infinite;
   }
-  .text-body {
-    color: var(--color-neutral-900);
-  }
-  .dark .text-body {
-    color: var(--color-neutral-50);
-  }
-  .myBorder {
-    border-top: 1px solid rgba(23, 23, 23, 0.6);
-
-  }
-  .dark .myBorder {
-    border-top: 1px solid rgba(250, 250, 250, 0.6);
-  }
-}
-
-@layer components {
   .gradient-animation {
     display: inline-block;
     background: linear-gradient(to right, #03d662 0%, #0a9add 50%, #10ecc4 100%);
     background-size: 200% 100%;
     animation: gradient 1s ease infinite;
   }
+  .btn-glass {
+    border: 1px solid rgba(23, 23, 23, 0.1);
+    background-color: rgba(255, 255, 255, 0.35);
+    transition: transform 300ms, background 300ms, box-shadow 300ms;
+  }
+  .dark .btn-glass {
+    border-color: rgba(250, 250, 250, 0.1);
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  .text-body {
+    color: var(--color-neutral-900);
+  }
+  .dark .text-body {
+    color: var(--color-neutral-50);
+  }
 }
 
 #contact-me {
-  transition: transform 1s, background 1s, border 1s;
+  transition: transform 500ms, background 500ms;
 }
 
 #contact-me:hover {

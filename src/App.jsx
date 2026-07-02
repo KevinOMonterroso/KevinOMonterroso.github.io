@@ -16,7 +16,6 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
-      <div id="carouselB" className="stripesB px-6 h-3 w-full overflow-hidden" />
       <Footer />
     </>
   );

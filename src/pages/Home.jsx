@@ -41,13 +41,14 @@ const Home = () => {
           className="block mb-2 w-1/2 max-w-62.5 md:w-62.5 md:mb-0 md:inline-block 
             animate-reveal rounded-xl"  
           alt="Kevin Monterroso"
+          loading="lazy"
+          decoding="async"
         />
       </section>
       <a 
         id="contact-me"
-        className="bg-transparent border border-neutral-900 dark:border-neutral-50 
-          text-body w-40 h-12 flex items-center 
-          justify-center px-6 rounded-xl"
+        className="btn-glass border border-neutral-900/10 dark:border-neutral-50/10 text-body w-40 h-12 flex 
+        items-center justify-center px-6 rounded-xl bg-white/35 dark:bg-black/35"
         href="#footer">
           Contáctame
       </a>

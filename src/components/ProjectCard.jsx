@@ -4,7 +4,7 @@ const ProjectCard = ({ title, description, link }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="block rounded-xl bg-white p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl dark:bg-neutral-800"
+      className="block rounded-xl bg-white/35  dark:bg-black/35 p-6 shadow-lg transition-all duration-200 hover:-translate-y-1 hover:shadow-xl "
     >
       <h3 className="mb-3 font-jetbrains-mono text-xl font-bold text-emerald-500">{title}</h3>
       <p className="mb-4 text-neutral-600 dark:text-neutral-400">{description}</p>
