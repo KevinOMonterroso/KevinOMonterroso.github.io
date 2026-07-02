@@ -3,22 +3,21 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
-import Carousel from "./components/Carousel.jsx";
 
 
 function App() {
   return (
     <>
-      <div className="flex min-h-screen flex-col justify-between bg-neutral-50 pt-20 transition-colors duration-200 dark:bg-neutral-900">
-        <Navbar />
-        <Carousel/>
+      <Navbar />
+      <div className="flex mt-20  px-10 md:px-16 xl:px-24 flex-col justify-between 
+        transition-colors duration-200">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
-        <Carousel/>
-        <Footer />
       </div>
+      <div id="carouselB" className="stripesB px-6 h-3 w-full overflow-hidden" />
+      <Footer />
     </>
   );
 }

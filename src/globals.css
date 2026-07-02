@@ -52,6 +52,16 @@
       background-position: 0% 50%;
     }
   }
+
+  --animate-reveal: reveal 1s ease;
+  @keyframes reveal {
+    0% {
+      transform: translateX(200%);
+    }
+    100% { 
+      transform: translateX(0%);
+    }
+  }
 }
 
 @layer base {
@@ -78,13 +88,35 @@
       45deg,
       #5ee9b5 0px,
       #5ee9b5 10px,
-      #fafafa 10px,
-      #fafafa 20px
+      #fafafa00 10px,
+      #fafafa00 20px
     );
     background-size: 28.284px 28.284px;
   }
   .dark .stripes{
     animation: scrollRev 1s linear infinite;
+    background: repeating-linear-gradient(
+      45deg,
+      #d0fae5 0px,
+      #d0fae5 10px,
+      #17171700 10px,
+      #17171700 20px
+    );
+    background-size: 28.284px 28.284px;
+  }
+  .stripesB {
+    animation: scrollRev 1s linear infinite;
+    background: repeating-linear-gradient(
+      45deg,
+      #5ee9b5 0px,
+      #5ee9b5 10px,
+      #fafafa 10px,
+      #fafafa 20px
+    );
+    background-size: 28.284px 28.284px;
+  }
+  .dark .stripesB{
+    animation: scrollFor 1s linear infinite;
     background: repeating-linear-gradient(
       45deg,
       #d0fae5 0px,
@@ -102,13 +134,47 @@
     -webkit-text-fill-color: transparent;
     animation: gradient 1s ease infinite;
   }
+  .text-body {
+    color: var(--color-neutral-900);
+  }
+  .dark .text-body {
+    color: var(--color-neutral-50);
+  }
+  .myBorder {
+    border-top: 1px solid rgba(23, 23, 23, 0.6);
+
+  }
+  .dark .myBorder {
+    border-top: 1px solid rgba(250, 250, 250, 0.6);
+  }
+}
+
+@layer components {
+  .gradient-animation {
+    display: inline-block;
+    background: linear-gradient(to right, #03d662 0%, #0a9add 50%, #10ecc4 100%);
+    background-size: 200% 100%;
+    animation: gradient 1s ease infinite;
+  }
+}
+
+#contact-me {
+  transition: transform 1s, background 1s, border 1s;
+}
+
+#contact-me:hover {
+  background: linear-gradient(to right, #03d662 0%, #0a9add 50%, #10ecc4 100%);
+  background-size: 200% 100%;
+  animation: gradient 1s ease infinite;
+  transform: translateY(-5px);
+  border: none;
 }
 
 #typewriter::after {
   content: "_";
   animation: blink 1s step-end infinite;
   margin-left: 2px;
-  color: var(--color-neutral-900);
+  color: var(--color-neutral-900) ;
 }
 
 .dark #typewriter::after {

@@ -1,9 +1,8 @@
 function About() {
   return (
-    <section id="about" className="px-4 py-20">
-      <div className="mx-auto max-w-4xl">
-        <div className="p-8">
-          <b className="mb-1 underline decoration-wavy decoration-amber-300 italic text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+    <section id="about">
+      <div className="py-8 mx-auto max-w-4xl">
+          <b className="mb-1 underline decoration-wavy decoration-amber-300 italic text-xl font-semibold text-body">
             Quien soy
           </b>
           <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
@@ -11,7 +10,7 @@ function About() {
             en la Universidad UMG, originario de Guatemala.
           </p>
           <br/>
-          <b className="mb-1 underline decoration-wavy decoration-amber-300 italic text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+          <b className="mb-1 underline decoration-wavy decoration-amber-300 italic text-xl font-semibold text-body">
             Mini blog
           </b>
           <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
@@ -36,7 +35,7 @@ function About() {
             Aún me falta mucho recorrido para llegar a ser un desarrollador front-end como él, pero eso no me desanima; 
             por el contrario, me llena de emoción llegar a poder realizar trabajos como los que él hace.
           </p>
-        </div>
+        
       </div>
     </section>
   );
